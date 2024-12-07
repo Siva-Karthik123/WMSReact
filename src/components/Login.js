@@ -29,7 +29,7 @@ function Login() {
 
     try {
       // Send login request with email, password, and reCAPTCHA token
-      const response = await axios.post('http://localhost:8081/login', {
+      const response = await axios.post('https://wmsserver-production.up.railway.app/login', {
         email,
         password,
         captcha: captchaValue,
