@@ -42,7 +42,7 @@ function UploadWorkshop() {
         }
 
         try {
-            const response = await axios.post('http://localhost:8081/createworkshops', formData, {
+            const response = await axios.post('https://wmsserver-production.up.railway.app/createworkshops', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
