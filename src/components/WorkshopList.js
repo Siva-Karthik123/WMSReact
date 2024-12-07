@@ -12,7 +12,7 @@ function Workshops() {
 
   useEffect(() => {
     // Fetch workshops from the backend API
-    axios.get('http://localhost:8081/workshops')
+    axios.get('https://wmsserver-production.up.railway.app/workshops')
       .then(response => {
         setWorkshops(response.data); // Set all workshops data
         setFilteredWorkshops(response.data); // Initially, display all workshops
