@@ -12,7 +12,7 @@ function AdminWorkshops() {
   // Function to fetch workshops from the database
   const fetchWorkshops = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/workshops'); // Adjust URL as needed
+      const response = await axios.get('https://wmsserver-production.up.railway.app/workshops'); // Adjust URL as needed
       setWorkshops(response.data);
     } catch (err) {
       console.error("Error fetching workshops:", err);
@@ -28,7 +28,7 @@ function AdminWorkshops() {
 
   const fetchAttendees = async (workshopId) => {
     try {
-      const response = await axios.get(`http://localhost:8081/registrations/${workshopId}`);
+      const response = await axios.get(`https://wmsserver-production.up.railway.app/registrations/${workshopId}`);
       setAttendees(response.data); // Store attendees list in state
     } catch (err) {
       console.error("Error fetching attendees:", err);
@@ -40,7 +40,7 @@ function AdminWorkshops() {
     
     if (isConfirmed) {
       try {
-        await axios.delete(`http://localhost:8081/workshops/${id}`);
+        await axios.delete(`https://wmsserver-production.up.railway.app/workshops/${id}`);
         setWorkshops(workshops.filter(workshop => workshop.id !== id));
         alert("Workshop deleted successfully.");
       } catch (err) {
