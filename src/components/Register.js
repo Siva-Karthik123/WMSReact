@@ -40,7 +40,7 @@ function Register() {
     }
 
     try {
-      const response = await axios.post('http://localhost:8081/register', {
+      const response = await axios.post('https://wmsserver-production.up.railway.app/register', {
         name,
         email,
         password,
