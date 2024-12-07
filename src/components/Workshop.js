@@ -18,7 +18,7 @@ function Workshop() {
   useEffect(() => {
     const fetchWorkshop = async () => {
       try {
-        const response = await axios.get(`http://localhost:8081/workshop/${workshopId}`);
+        const response = await axios.get(`https://wmsserver-production.up.railway.app/workshop/${workshopId}`);
         setWorkshop(response.data);
       } catch (error) {
         console.error("Error fetching workshop:", error);
@@ -46,7 +46,7 @@ function Workshop() {
   const handleRegistrationConfirm = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:8081/registerworkshop/${workshopId}/register/${user.id}`
+        `https://wmsserver-production.up.railway.app/registerworkshop/${workshopId}/register/${user.id}`
       );
       setRegistrationStatus(response.data || "Successfully registered!");
     } catch (error) {
