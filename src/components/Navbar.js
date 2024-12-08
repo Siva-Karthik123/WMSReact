@@ -25,9 +25,10 @@ const Navbar = () => {
     const value = event.target.value;
     if (value === 'profile') {
       navigate('/profile');
-    } else if (value === 'dashboard' ) {
+    } else if (value === 'dashboard' && store.user.role === 'admin') {
       navigate('/admin');
     } else if (value === 'logout') {
+      navigate('/');
       logout();
     }
   };
