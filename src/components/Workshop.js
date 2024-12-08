@@ -88,7 +88,7 @@ function Workshop() {
           </div>
           <div className="workshop-image col-6">
             <img src={workshop.image} alt={`${workshop.title} Logo`} />
-            <p style={{color:'white'}}>
+            <p style={{color:"white"}}>
               Available Slots: {workshop.availableSlots} | {workshop.date} | {workshop.time}
             </p>
             <button className="workshop-btn" onClick={handleRegisterClick}>
