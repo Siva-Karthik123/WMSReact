@@ -58,7 +58,7 @@ const Navbar = () => {
                   defaultValue=""
                 >
                   <option value="" disabled>Options</option>
-                  <option value="dashboard">DashBoard</option>
+                  {store.user.role === 'admin' && <option value="dashboard">Dashboard</option>}
                   <option value="profile">Profile</option>
                   <option value="logout">Logout</option>
                 </select>
